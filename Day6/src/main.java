@@ -31,35 +31,35 @@ public class main {
 			buffer.remove(bufLen-14);
 			buffer.add(str.charAt(l+1));
 			System.out.println(buffer);
-								bufLen = buffer.size();
-								//check for repeating chars in buffer
-								boolean somFlag = false;
-								int dupCount = 0;
-								for(int j=0; j<bufLen; j++) {
-									
-									for(int k=j; k<bufLen; k++) {
-										if(buffer.get(j) == buffer.get(k) && j!=k) {
+				bufLen = buffer.size();
+				//check for repeating chars in buffer
+				boolean somFlag = false;
+				int dupCount = 0;
+				for(int j=0; j<bufLen; j++) {
+					
+					for(int k=j; k<bufLen; k++) {
+						if(buffer.get(j) == buffer.get(k) && j!=k) {
 //											System.out.println("DUPLICATES: "+buffer.get(j)+" "+buffer.get(k));
-											dupCount++;
-											break;
-										}
-										else if(buffer.get(j) != buffer.get(k) && j!=k) {
-						//					System.out.println("Not Duplicates");
-											
-										}
-										
-									}
-									
-									
+							dupCount++;
+							break;
+						}
+						else if(buffer.get(j) != buffer.get(k) && j!=k) {
+		//					System.out.println("Not Duplicates");
+							
+						}
+						
+					}
+					
+					
 //									System.out.println("Duplicates: "+dupCount);
-									if(dupCount>0) {
-										somFlag = false;
-										
-									}
+					if(dupCount>0) {
+						somFlag = false;
+						
+					}
 //									System.out.println("SoM: "+somFlag);
-									
-									
-								}
+					
+					
+				}
 								
 			System.out.println("Characters checked: "+(l+1));
 			if(dupCount == 0) {
